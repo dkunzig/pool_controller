@@ -56,7 +56,7 @@ bool manualCleanerOn = false;
 
 struct AMessage
 {
-   int count;
+     int count;
 } xMessage;
 
 //SMTPData data;
