@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<body onload="setOnOff()" >
+
+    <h1>Pool Control</h1>
+    <br><br><br>
+    <button onclick="turnPumpOnOrOff()" >Pump</button>
+    <button id="pumpOnOff" size=3 >Off</button>
+
+    
+    <br><br><br>
+
+    <button onclick="turnCleanerOnOrOff()" >Pool Cleaner</button>
+    <button id="cleanerOnoff" size=3 >Off</button>
+    
+   
+
+    <br><br><br>
+
+   
+    <button onclick="turnLightOnOrOff()" >Light</button>
+    <button id="lightOnOff" size=3 >Off</button>
+    
+    <br><br><br>
+
+    <form action="/Timers" method="get" >
+        <button type="submit">Set Timers</button>
+    </form>
+
+
+    <script>
+        function turnPumpOnOrOff() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("pumpOnOff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "pumpOnOff", true);
+          xhttp.send();
+          return;
+        }
+
+        function turnCleanerOnOrOff() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("cleanerOnoff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "cleanerOnOff", true);
+          xhttp.send();
+          return;
+        }
+
+        function turnLightOnOrOff() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("lightOnOff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "lightOnOff", true);
+          xhttp.send();
+          return;
+        }
+
+        function getPumpStatus() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("pumpOnOff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "getPumpStatus", true);
+          xhttp.send();
+          return;
+        }
+
+        function getCleanerStatus() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("cleanerOnoff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "getCleanerStatus", true);
+          xhttp.send();
+          return;
+        }
+
+        function getLightStatus() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("lightOnOff").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "getLightStatus", true);
+          xhttp.send();
+          return;
+        }
+
+        function setOnOff() {
+            getPumpStatus();
+            getCleanerStatus();
+            getLightStatus();
+            return;
+        }
+    
+    </script>
+        
+
+</body>
+</html>
