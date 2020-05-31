@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 *.json
+*.cmake
+*.txt
+
 
 
 # Object files
