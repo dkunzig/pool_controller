@@ -236,7 +236,7 @@ ENABLE_TESTING:BOOL=
 ENABLE_ZLIB_SUPPORT:BOOL=OFF
 
 //No help, variable specified on the command line.
-EXTRA_COMPONENT_DIRS:PATH=c:/Users/Don/Documents/PlatformIO/Projects/pool-controller/.pio/build/esp32dev/__pio_env;c:/Users/Don/Documents/PlatformIO/Projects/pool-controller/src
+EXTRA_COMPONENT_DIRS:PATH=C:/Users/Don/Documents/PlatformIO/Projects/pool-controller/.pio/build/esp32dev/__pio_env;C:/Users/Don/Documents/PlatformIO/Projects/pool-controller/src
 
 //GCC is not 5.2.0 version
 GCC_NOT_5_2_0:STRING=1

@@ -314,7 +314,7 @@
 				{
 					"directoryIndex" : 13,
 					"id" : "__idf_bootloader_support::@d88583f91142925c6676",
-					"jsonFile" : "target-__idf_bootloader_support-90348b937acfbce942c4.json",
+					"jsonFile" : "target-__idf_bootloader_support-31bbe8d78a91a0a3a2a7.json",
 					"name" : "__idf_bootloader_support",
 					"projectIndex" : 1
 				},
@@ -335,7 +335,7 @@
 				{
 					"directoryIndex" : 15,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-d24b3b5636e29916eb14.json",
+					"jsonFile" : "target-__idf_main-907a24c4d15e1497d1e6.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},
@@ -391,7 +391,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "bootloader.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-bootloader.elf-a4c7c2557121bf51fbd0.json",
+					"jsonFile" : "target-bootloader.elf-cb333c8ff93833e2c88b.json",
 					"name" : "bootloader.elf",
 					"projectIndex" : 0
 				},

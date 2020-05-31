@@ -325,12 +325,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "__idf_soc::@824f1541829f13857909"
-		},
-		{
 			"backtrace" : 5,
 			"id" : "__idf_micro-ecc::@37158dc68a69c79f835a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "__idf_soc::@824f1541829f13857909"
 		}
 	],
 	"id" : "__idf_bootloader_support::@d88583f91142925c6676",

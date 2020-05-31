@@ -495,8 +495,8 @@ static esp_err_t ajax_handler(httpd_req_t *req)
        {
             Toggle_pin(PUMP_PIN,1);
             httpd_resp_send(req, "On", 2);
-            manualPoolOn = false;
-            manualPoolOff = true;
+            manualPoolOn = true;
+            manualPoolOff = false;
        }       
     }
     if(cleanerOnOff)

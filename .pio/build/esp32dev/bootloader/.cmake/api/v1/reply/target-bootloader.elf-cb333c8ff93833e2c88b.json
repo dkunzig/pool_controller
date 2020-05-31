@@ -133,20 +133,20 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 4,
-			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "__idf_soc::@824f1541829f13857909"
-		},
-		{
 			"backtrace" : 3,
 			"id" : "__idf_micro-ecc::@37158dc68a69c79f835a"
 		},
 		{
 			"backtrace" : 3,
 			"id" : "__idf_spi_flash::@6f8a8c72478269b2cd60"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "__idf_soc::@824f1541829f13857909"
 		},
 		{
 			"backtrace" : 3,

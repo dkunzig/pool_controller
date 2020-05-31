@@ -54,18 +54,6 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 324,
-				"parent" : 3
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 309,
-				"parent" : 4
-			},
-			{
-				"command" : 3,
-				"file" : 0,
 				"line" : 327,
 				"parent" : 3
 			},
@@ -73,13 +61,25 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 306,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 324,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 309,
 				"parent" : 6
 			},
 			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 306,
-				"parent" : 6
+				"parent" : 4
 			},
 			{
 				"command" : 5,
@@ -109,7 +109,7 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 306,
-				"parent" : 6
+				"parent" : 4
 			},
 			{
 				"command" : 7,
@@ -239,7 +239,7 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"define" : "HAVE_CONFIG_H"
 				},
 				{
@@ -370,11 +370,11 @@
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/app_trace/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/nghttp/port/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 7,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/nghttp/nghttp2/lib/includes"
 				},
 				{
@@ -386,11 +386,11 @@
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/mbedtls/mbedtls/include"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/esp-tls"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 5,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/tcp_transport/include"
 				}
 			],
@@ -412,15 +412,15 @@
 		},
 		{
 			"backtrace" : 5,
-			"id" : "__idf_nghttp::@6ca59972b809fbe6ce53"
+			"id" : "__idf_tcp_transport::@2217ed266b3ca9834900"
 		},
 		{
 			"backtrace" : 7,
-			"id" : "__idf_esp-tls::@fec40229f530785b7d3e"
+			"id" : "__idf_nghttp::@6ca59972b809fbe6ce53"
 		},
 		{
 			"backtrace" : 8,
-			"id" : "__idf_tcp_transport::@2217ed266b3ca9834900"
+			"id" : "__idf_esp-tls::@fec40229f530785b7d3e"
 		}
 	],
 	"id" : "__idf_esp_http_client::@483ffd9ca1a06508c93f",

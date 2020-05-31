@@ -219,7 +219,7 @@
 					"define" : "HAVE_CONFIG_H"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"define" : "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\""
 				}
 			],
@@ -342,19 +342,19 @@
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/app_trace/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/esp-tls"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/mbedtls/port/include"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/mbedtls/mbedtls/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 5,
 					"path" : "C:/Users/Don/.platformio/packages/framework-espidf/components/tcp_transport/include"
 				},
 				{
@@ -381,15 +381,15 @@
 		},
 		{
 			"backtrace" : 5,
-			"id" : "__idf_nghttp::@6ca59972b809fbe6ce53"
-		},
-		{
-			"backtrace" : 5,
-			"id" : "__idf_esp-tls::@fec40229f530785b7d3e"
+			"id" : "__idf_tcp_transport::@2217ed266b3ca9834900"
 		},
 		{
 			"backtrace" : 6,
-			"id" : "__idf_tcp_transport::@2217ed266b3ca9834900"
+			"id" : "__idf_nghttp::@6ca59972b809fbe6ce53"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "__idf_esp-tls::@fec40229f530785b7d3e"
 		}
 	],
 	"id" : "__idf_esp_websocket_client::@2aa04d350e0c9afab7cd",

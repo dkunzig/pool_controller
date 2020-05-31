@@ -248,7 +248,7 @@ MCONF:FILEPATH=C:/Users/Don/.platformio/packages/tool-mconf/mconf-idf.exe
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //No help, variable specified on the command line.
-SDKCONFIG:UNINITIALIZED=c:\Users\Don\Documents\PlatformIO\Projects\pool-controller\sdkconfig
+SDKCONFIG:UNINITIALIZED=C:\Users\Don\Documents\PlatformIO\Projects\pool-controller\sdkconfig
 
 //Dependencies for the target
 __idf_bootloader_support_LIB_DEPENDS:STATIC=general;__idf_log;general;__idf_xtensa;
