@@ -3,12 +3,14 @@
 #include <stdio.h>
 
 typedef struct nvs_timer_t {
+    int16_t pumpTimerOnYday;
     int16_t pumpTimerOnHour; 
     int16_t pumpTimerOnMinute;
     int16_t pumpTimerOnAmPm;
     int16_t pumpTimerOffHour; 
     int16_t pumpTimerOffMinute;
     int16_t pumpTimerOffAmPm;
+    int16_t cleanerTimerOnYday;
     int16_t cleanerTimerOnHour;
     int16_t cleanerTimerOnMinute;
     int16_t cleanerTimerOnAmPm;
@@ -21,6 +23,7 @@ typedef struct nvs_timer_t {
 typedef struct nvs_times_t {
     bool cleaner;
     bool pump;
+    int16_t timerOnYday; 
     int16_t timerOnHour; 
     int16_t timerOnMinute;
     int16_t timerOnAmPm; 

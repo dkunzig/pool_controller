@@ -1,0 +1,15 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/Don/Documents/PlatformIO/Projects/pool-controller/.pio/build/esp32dev/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/Don/.platformio/packages/tool-ninja/ninja.exe cmTC_7efe0 && ninja: error: unknown target 'cmTC_7efe0'
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/Don/Documents/PlatformIO/Projects/pool-controller/.pio/build/esp32dev/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Users/Don/.platformio/packages/tool-ninja/ninja.exe cmTC_a505d && ninja: error: loading 'build.ninja': The system cannot find the file specified.
+
+
+
+

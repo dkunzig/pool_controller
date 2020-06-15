@@ -760,11 +760,13 @@ void Toggle_pin(int gpio,int offOn)
 }
 void check_timer()
 { 
+    bool pump_timer_spanned_midnight = false;
+    bool cleaner_timer_spanned_midnight = false;
+    bool pump_on = false;
     struct AMessage
     {
         int count;
     } zMessage;
-
     int * queueItem;
     struct tm* time;
     while(1)
@@ -774,8 +776,8 @@ void check_timer()
     //printf("in queue count = %d \n",zMessage.count);
     time = get_time();
     int pump_on_minutes,pump_off_minutes,cleaner_on_minutes,cleaner_off_minutes;
+    
     int total_mins_today = (time->tm_hour * 60) + time->tm_min; //get the number of elapsed minutes in the current day
-
     //get elapsed minutes for pump on
     if(times.pumpTimerOnAmPm == 1)
        pump_on_minutes = (times.pumpTimerOnHour+12) * 60;
@@ -790,7 +792,9 @@ void check_timer()
        pump_off_minutes = times.pumpTimerOffHour * 60;
     pump_off_minutes += times.pumpTimerOffMinute;
 
-    
+    if(pump_off_minutes < pump_on_minutes)
+        pump_timer_spanned_midnight = true;
+      
     //get elapsed minutes for cleaner on
     if(times.cleanerTimerOnAmPm == 1)
        cleaner_on_minutes = (times.cleanerTimerOnHour+12) * 60;
@@ -805,25 +809,43 @@ void check_timer()
        cleaner_off_minutes = times.cleanerTimerOffHour * 60;
     cleaner_off_minutes += times.cleanerTimerOffMinute;
 
-    if(total_mins_today >= pump_on_minutes && total_mins_today <= pump_off_minutes)
+    if(cleaner_off_minutes < cleaner_on_minutes)
+        cleaner_timer_spanned_midnight = true;
+
+    if(pump_timer_spanned_midnight == false)
     {
-        if(gpio_get_level(PUMP_PIN) == 0 && manualPoolOff == false )
-        {
-            Toggle_pin(PUMP_PIN,1);
-            printf("turning pump on at ");
-            printf("day = %d hour = %d minute = %d second = %d year = %d\n",time->tm_mday,time->tm_hour,time->tm_min,time->tm_sec,time->tm_year);
-        }
-    }
+        if(total_mins_today >= pump_on_minutes && total_mins_today <= pump_off_minutes)
+           pump_on = true;
+    } 
     else
     {
-        if(gpio_get_level(PUMP_PIN) == 1 && manualPoolOn == false)
-        {
-            Toggle_pin(POOL_CLEANER_PIN,0); //if shutting the pump off, you must shut off the cleaner
-            Toggle_pin(PUMP_PIN,0);
-            printf("turning pump and cleaner off at ");
-            printf("day = %d hour = %d minute = %d second = %d year = %d\n",time->tm_mday,time->tm_hour,time->tm_min,time->tm_sec,time->tm_year);
-        }
+        if(total_mins_today >= pump_off_minutes && total_mins_today <= pump_on_minutes)
+           pump_on = true;
     }
+       
+
+
+    
+    if(total_mins_today >= pump_on_minutes && total_mins_today <= pump_off_minutes)
+        {
+            if(gpio_get_level(PUMP_PIN) == 0 && manualPoolOff == false )
+            {
+                Toggle_pin(PUMP_PIN,1);
+                printf("turning pump on at ");
+            printf("day = %d hour = %d minute = %d second = %d year = %d\n",time->tm_mday,time->tm_hour,time->tm_min,time->tm_sec,time->tm_year);
+            }
+        }
+    else
+        {
+            if(gpio_get_level(PUMP_PIN) == 1 && manualPoolOn == false)
+            {
+                Toggle_pin(POOL_CLEANER_PIN,0); //if shutting the pump off, you must shut off the cleaner
+                Toggle_pin(PUMP_PIN,0);
+                printf("turning pump and cleaner off at ");
+                printf("day = %d hour = %d minute = %d second = %d year = %d\n",time->tm_mday,time->tm_hour,time->tm_min,time->tm_sec,time->tm_year);
+            }
+    }
+    
 
     if(total_mins_today >= cleaner_on_minutes && total_mins_today <= cleaner_off_minutes)
     {
